@@ -5,16 +5,16 @@
   --font-sans: 'Source Sans Pro', system-ui, sans-serif;
   --font-heading: 'Montserrat', sans-serif;
   
-  --color-primary-50: #eff6ff;
-  --color-primary-100: #dbeafe;
-  --color-primary-200: #bfdbfe;
-  --color-primary-300: #93c5fd;
-  --color-primary-400: #60a5fa;
-  --color-primary-500: #3b82f6;
-  --color-primary-600: #2563eb;
-  --color-primary-700: #1d4ed8;
-  --color-primary-800: #1e40af;
-  --color-primary-900: #1e3a8a;
+  --color-primary-50: #f3f9ff;
+  --color-primary-100: #e6f2ff;
+  --color-primary-200: #cfe7ff;
+  --color-primary-300: #aad4ff;
+  --color-primary-400: #7bbcff;
+  --color-primary-500: #57a6ff;
+  --color-primary-600: #3d94f5;
+  --color-primary-700: #2f84e6;
+  --color-primary-800: #2673cf;
+  --color-primary-900: #1f62b5;
   
   --color-secondary-50: #f8fafc;
   --color-secondary-100: #f1f5f9;
@@ -101,7 +101,7 @@ body {
   border-radius: 0.5rem;
   color: white;
   background: linear-gradient(135deg, var(--color-primary-600), var(--color-primary-700));
-  box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39);
+  box-shadow: 0 4px 14px 0 rgba(61, 148, 245, 0.36);
   transition: all 0.3s ease;
   letter-spacing: 0.3px;
 }
@@ -109,12 +109,12 @@ body {
 .btn-primary:hover {
   background: linear-gradient(135deg, var(--color-primary-700), var(--color-primary-800));
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+  box-shadow: 0 6px 20px rgba(47, 132, 230, 0.45);
 }
 
 .btn-primary:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 0 0 3px rgba(61, 148, 245, 0.3);
 }
 
 .btn-secondary {
@@ -192,12 +192,12 @@ body {
   background-color: var(--color-primary-600);
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 12px rgba(61, 148, 245, 0.3);
 }
 
 .btn-outline-dark:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 0 0 3px rgba(61, 148, 245, 0.3);
 }
 
 .card {

@@ -31,8 +31,9 @@ const ManagedIT = () => {
         "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop",
     },
     {
-      title: "Cloud Management",
-      description: "Complete cloud infrastructure management and optimization.",
+      title: "IT AMC Contracts",
+      description:
+        "Comprehensive Annual Maintenance Contracts for proactive IT support and system reliability.",
       IconComponent: CloudIcon,
       image:
         "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop",
@@ -91,7 +92,7 @@ const ManagedIT = () => {
     "System Updates & Patch Management",
     "Security Monitoring & Threat Response",
     "Data Backup & Disaster Recovery",
-    "Cloud Infrastructure Management",
+    "IT AMC Contracts",
     "Email & Collaboration Tools",
     "IT Help Desk & User Support",
     "Vendor Coordination",

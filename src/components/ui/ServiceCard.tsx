@@ -28,6 +28,7 @@ const ServiceCard = ({
         ease: [0.4, 0, 0.2, 1],
       }}
       className="card group cursor-pointer relative overflow-hidden"
+      style={{ minHeight: "160px" }}
     >
       {/* Background Image */}
       {image && (
@@ -50,11 +51,11 @@ const ServiceCard = ({
           {icon}
         </motion.div>
       )}
-      <div className="flex-grow flex flex-col relative z-10">
-        <h3 className="text-lg font-semibold mb-2 text-secondary-900 group-hover:text-primary-600 transition-colors duration-300 text-center">
+      <div className="relative z-10">
+        <h3 className="text-lg font-semibold mb-1.5 text-secondary-900 group-hover:text-primary-600 transition-colors duration-300 text-center">
           {title}
         </h3>
-        <p className="text-sm text-secondary-600 leading-relaxed text-center flex-grow">
+        <p className="text-sm text-secondary-600 leading-relaxed text-center">
           {description}
         </p>
       </div>

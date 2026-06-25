@@ -225,27 +225,6 @@ const Cybersecurity = () => {
           </div>
         </div>
       </Section>
-
-      {/* CTA Section */}
-      <Section className="bg-gradient-to-br from-primary-900 to-primary-700 text-white">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto text-center"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Secure Your Business Today
-            </h2>
-            <p className="text-xl text-primary-100 mb-8">
-              Don't wait for a breach to happen. Get a free security assessment
-              and discover how we can protect your business from cyber threats.
-            </p>
-          </motion.div>
-        </div>
-      </Section>
     </div>
   );
 };

@@ -66,7 +66,7 @@ const Solutions = () => {
                 "url('https://images.unsplash.com/photo-1546412414-e1885259563a?q=80&w=2070&auto=format&fit=crop')",
             }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-600/95 to-primary-700/95"></div>
+          <div className="absolute inset-0 bg-white/85"></div>
         </div>
         <div className="container-custom relative z-10">
           <motion.div
@@ -75,10 +75,10 @@ const Solutions = () => {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-secondary-900">
               Comprehensive IT Solutions
             </h1>
-            <p className="text-xl text-primary-100 leading-relaxed mb-8">
+            <p className="text-xl text-secondary-700 leading-relaxed mb-8">
               Dubai's Most Trusted IT Solutions Provider - Delivering innovative
               technology solutions across all industries with unmatched
               expertise and support.
@@ -87,7 +87,7 @@ const Solutions = () => {
               <Button to="/contact" variant="primary">
                 Get Started Today
               </Button>
-              <Button to="/about" variant="outline">
+              <Button to="/about" variant="outline-dark">
                 Learn About Us
               </Button>
             </div>
@@ -96,7 +96,7 @@ const Solutions = () => {
       </section>
 
       {/* Trust Indicators */}
-      <Section className="bg-gradient-to-r from-primary-700 to-primary-600 text-white">
+      <Section className="bg-white border-y border-secondary-100">
         <div className="container-custom">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {trustIndicators.map((indicator, index) => (
@@ -109,12 +109,12 @@ const Solutions = () => {
                 className="text-center"
               >
                 <div className="flex justify-center mb-3">
-                  <indicator.IconComponent className="w-14 h-14 text-white" />
+                  <indicator.IconComponent className="w-14 h-14 text-primary-600" />
                 </div>
-                <div className="text-4xl font-bold mb-2">
+                <div className="text-4xl font-bold mb-2 text-secondary-900">
                   {indicator.number}
                 </div>
-                <div className="text-primary-100">{indicator.label}</div>
+                <div className="text-secondary-600">{indicator.label}</div>
               </motion.div>
             ))}
           </div>
@@ -359,7 +359,7 @@ const Solutions = () => {
       </Section>
 
       {/* CTA Section */}
-      <Section className="bg-gradient-to-br from-primary-900 to-primary-700 text-white">
+      <Section className="bg-secondary-50">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -368,20 +368,20 @@ const Solutions = () => {
             transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-secondary-900">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-primary-100 mb-8">
+            <p className="text-xl text-secondary-600 mb-8">
               Join over 1,000 satisfied clients who trust us with their IT
               infrastructure. Get a free consultation and discover how we can
               help your business thrive.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link to="/contact">
-                <Button variant="outline">Get Free Consultation</Button>
+                <Button variant="primary">Get Free Consultation</Button>
               </Link>
               <Link to="/services">
-                <Button variant="primary">View Our Services</Button>
+                <Button variant="outline-dark">View Our Services</Button>
               </Link>
             </div>
           </motion.div>

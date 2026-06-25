@@ -25,7 +25,7 @@ const Home = () => {
                 "url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop')",
             }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-primary-800/85 to-primary-700/90"></div>
+          <div className="absolute inset-0 bg-[#4FA3DC]/75"></div>
         </div>
 
         {/* Animated Background Elements */}
@@ -42,17 +42,14 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
-                Best IT Company
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight">
+                Your Trusted Partner for
                 <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-300 to-primary-100">
-                  in Dubai
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-cyan-100">
+                  IT Excellence in UAE
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
-                NSLogix IT Solutions is an industry leader in Managed IT
-                services and system integration.
-              </p>
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button to="/contact" variant="primary">
                   Get Started
@@ -118,7 +115,7 @@ const Home = () => {
       </Section>
 
       {/* Why Choose Us Section */}
-      <Section className="relative bg-gradient-to-br from-primary-600 to-primary-700 text-white overflow-hidden">
+      <Section className="relative bg-[#5DADE2] text-white overflow-hidden">
         {/* Tech Pattern Background */}
         <div className="absolute inset-0 opacity-10">
           <div
@@ -139,7 +136,7 @@ const Home = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Dubai's Most Trusted IT Solutions Provider
+                UAE's Trusted IT Solutions Provider
               </h2>
               <p className="text-lg text-primary-100 mb-6 leading-relaxed">
                 As your dedicated IT partner, we work closely with vendors on

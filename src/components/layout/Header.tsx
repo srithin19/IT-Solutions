@@ -66,7 +66,7 @@ const Header = () => {
               >
                 {item.subItems ? (
                   <>
-                    <button className="text-secondary-700 hover:text-primary-600 font-medium transition-colors duration-200 flex items-center space-x-1 py-2">
+                    <button className="text-secondary-700 hover:text-primary-600 hover:bg-primary-50 font-medium transition-all duration-200 flex items-center space-x-1 py-2 px-3 rounded-md">
                       <span>{item.label}</span>
                       <svg
                         className="w-4 h-4 transition-transform duration-200"
@@ -122,7 +122,7 @@ const Header = () => {
                   <Link
                     to={item.path}
                     onClick={() => handleNavLinkClick(item.path)}
-                    className={`text-secondary-700 hover:text-primary-600 font-medium transition-colors duration-200 py-2 ${
+                    className={`text-secondary-700 hover:text-primary-600 hover:bg-primary-50 font-medium transition-all duration-200 py-2 px-3 rounded-md ${
                       location.pathname === item.path ? "text-primary-600" : ""
                     }`}
                   >
@@ -136,13 +136,13 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Link to="/contact" className="btn-primary">
-              Get Started
+              Get Quotation
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-secondary-900 transition-colors"
+            className="lg:hidden p-2 rounded-md text-secondary-900 hover:bg-primary-50 hover:text-primary-700 transition-all duration-200"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <svg
@@ -177,9 +177,9 @@ const Header = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden mt-4 pb-4 bg-white"
+              className="lg:hidden absolute top-20 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-secondary-200 shadow-xl"
             >
-              <nav className="flex flex-col space-y-4">
+              <nav className="max-h-[calc(100vh-5rem)] overflow-y-auto overscroll-contain px-4 py-4 space-y-2">
                 {navigationItems.map((item) => (
                   <div key={item.label}>
                     {item.subItems ? (
@@ -190,17 +190,36 @@ const Header = () => {
                               activeDropdown === item.label ? null : item.label,
                             )
                           }
-                          className="w-full text-left text-secondary-700 hover:text-primary-600 font-medium py-2"
+                          className="w-full flex items-center justify-between text-left text-secondary-700 hover:text-primary-700 hover:bg-primary-50 font-medium py-3 px-3 rounded-lg transition-all duration-200"
                         >
-                          {item.label}
+                          <span>{item.label}</span>
+                          <svg
+                            className="w-4 h-4 transition-transform duration-200"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            style={{
+                              transform:
+                                activeDropdown === item.label
+                                  ? "rotate(180deg)"
+                                  : "rotate(0deg)",
+                            }}
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M19 9l-7 7-7-7"
+                            />
+                          </svg>
                         </button>
                         {activeDropdown === item.label && (
-                          <div className="ml-4 mt-2 space-y-2">
+                          <div className="ml-3 mt-2 pl-3 border-l-2 border-primary-100 space-y-1">
                             {item.subItems.map((subItem) => (
                               <Link
                                 key={subItem.label}
                                 to={subItem.path}
-                                className="block text-secondary-600 hover:text-primary-600 py-1"
+                                className="block text-secondary-600 hover:text-primary-700 hover:bg-primary-50 py-2 px-3 rounded-md transition-all duration-200"
                                 onClick={() => handleNavLinkClick(subItem.path)}
                               >
                                 {subItem.label}
@@ -212,7 +231,7 @@ const Header = () => {
                     ) : (
                       <Link
                         to={item.path}
-                        className="block text-secondary-700 hover:text-primary-600 font-medium py-2"
+                        className="block text-secondary-700 hover:text-primary-700 hover:bg-primary-50 font-medium py-3 px-3 rounded-lg transition-all duration-200"
                         onClick={() => handleNavLinkClick(item.path)}
                       >
                         {item.label}
@@ -220,13 +239,15 @@ const Header = () => {
                     )}
                   </div>
                 ))}
-                <Link
-                  to="/contact"
-                  className="btn-primary w-full text-center"
-                  onClick={() => handleNavLinkClick("/contact")}
-                >
-                  Get Started
-                </Link>
+                <div className="pt-3 mt-2 border-t border-secondary-200 bg-white sticky bottom-0">
+                  <Link
+                    to="/contact"
+                    className="btn-primary w-full text-center hover:scale-[1.01] active:scale-[0.99]"
+                    onClick={() => handleNavLinkClick("/contact")}
+                  >
+                    Get Started
+                  </Link>
+                </div>
               </nav>
             </motion.div>
           )}

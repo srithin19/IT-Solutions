@@ -282,7 +282,7 @@ const ITConsultancy = () => {
               { number: "100+", label: "Businesses Transformed" },
               { number: "30%", label: "Average Cost Reduction" },
               { number: "95%", label: "Client Satisfaction" },
-              { number: "15+", label: "Years Experience" },
+              { number: "5+", label: "Years Experience" },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
