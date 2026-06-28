@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { navigationItems } from "@/data/constants";
+import companyLogo from "@/assets/NSL ICON.png";
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
@@ -27,31 +27,34 @@ const Header = () => {
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
     setIsMobileMenuOpen(false);
     setActiveDropdown(null);
   }, [location]);
 
   return (
-    <header
-      className={`fixed w-full top-0 z-50 h-20 ${
-        isScrolled || isMobileMenuOpen ? "bg-white shadow-lg" : "bg-transparent"
-      }`}
-    >
+    <header className="fixed w-full top-0 z-50 h-20 bg-white shadow-lg">
       <div className="container-custom">
         <div className="h-20 flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-gradient">
-              NSLogix IT Solutions
+          <Link
+            to="/"
+            className="group flex items-center gap-3 rounded-xl px-2 py-1 transition-all duration-200 hover:bg-white/70"
+          >
+            <div className="h-12 w-12 rounded-xl bg-white p-1.5 shadow-md ring-2 ring-primary-100 transition-all duration-200 group-hover:ring-primary-300">
+              <img
+                src={companyLogo}
+                alt="NSLogix IT Solutions logo"
+                className="h-full w-full object-contain"
+                loading="eager"
+              />
+            </div>
+            <div className="leading-tight">
+              <p className="text-lg md:text-xl font-bold text-gradient">
+                NSLogix IT Solutions
+              </p>
+              <p className="hidden md:block text-xs font-medium text-secondary-600">
+                Trusted Digital Transformation Partner
+              </p>
             </div>
           </Link>
 
@@ -134,40 +137,64 @@ const Header = () => {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:flex items-center gap-3">
+            <a
+              href="https://wa.me/971507364139"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat on WhatsApp"
+              className="h-12 w-12 rounded-xl bg-primary-50 text-primary-600 border border-primary-200 flex items-center justify-center transition-all duration-200 hover:bg-primary-100 hover:scale-105"
+            >
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.52 3.48A11.85 11.85 0 0012.06 0C5.56 0 .25 5.3.25 11.82c0 2.08.54 4.11 1.57 5.9L0 24l6.44-1.69a11.8 11.8 0 005.62 1.43h.01c6.5 0 11.82-5.3 11.82-11.82a11.74 11.74 0 00-3.37-8.44zm-8.46 18.27h-.01a9.76 9.76 0 01-4.98-1.37l-.36-.21-3.82 1 1.02-3.73-.23-.38a9.78 9.78 0 01-1.5-5.2c0-5.42 4.42-9.83 9.86-9.83a9.8 9.8 0 016.98 2.89 9.76 9.76 0 012.88 6.95c0 5.42-4.42 9.84-9.84 9.84zm5.39-7.35c-.3-.15-1.78-.88-2.06-.98-.28-.1-.49-.15-.69.15-.2.3-.79.98-.97 1.18-.18.2-.36.23-.66.08-.3-.15-1.28-.47-2.43-1.5-.9-.8-1.5-1.79-1.67-2.09-.18-.3-.02-.46.13-.61.13-.13.3-.33.44-.49.15-.16.2-.28.3-.47.1-.2.05-.37-.02-.52-.08-.15-.69-1.66-.95-2.27-.25-.6-.5-.5-.69-.51h-.59c-.2 0-.52.08-.8.37-.28.3-1.05 1.03-1.05 2.5s1.08 2.88 1.23 3.08c.15.2 2.12 3.25 5.14 4.56.72.31 1.29.5 1.72.64.72.23 1.38.2 1.9.12.58-.08 1.78-.73 2.03-1.44.25-.7.25-1.3.18-1.43-.08-.13-.28-.2-.58-.35z" />
+              </svg>
+            </a>
             <Link to="/contact" className="btn-primary">
               Get Quotation
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2 rounded-md text-secondary-900 hover:bg-primary-50 hover:text-primary-700 transition-all duration-200"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          <div className="lg:hidden flex items-center gap-2">
+            <a
+              href="https://wa.me/971507364139"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat on WhatsApp"
+              className="p-2 rounded-md text-primary-600 bg-primary-50 hover:bg-primary-100 transition-all duration-200"
             >
-              {isMobileMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
-          </button>
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.52 3.48A11.85 11.85 0 0012.06 0C5.56 0 .25 5.3.25 11.82c0 2.08.54 4.11 1.57 5.9L0 24l6.44-1.69a11.8 11.8 0 005.62 1.43h.01c6.5 0 11.82-5.3 11.82-11.82a11.74 11.74 0 00-3.37-8.44zm-8.46 18.27h-.01a9.76 9.76 0 01-4.98-1.37l-.36-.21-3.82 1 1.02-3.73-.23-.38a9.78 9.78 0 01-1.5-5.2c0-5.42 4.42-9.83 9.86-9.83a9.8 9.8 0 016.98 2.89 9.76 9.76 0 012.88 6.95c0 5.42-4.42 9.84-9.84 9.84zm5.39-7.35c-.3-.15-1.78-.88-2.06-.98-.28-.1-.49-.15-.69.15-.2.3-.79.98-.97 1.18-.18.2-.36.23-.66.08-.3-.15-1.28-.47-2.43-1.5-.9-.8-1.5-1.79-1.67-2.09-.18-.3-.02-.46.13-.61.13-.13.3-.33.44-.49.15-.16.2-.28.3-.47.1-.2.05-.37-.02-.52-.08-.15-.69-1.66-.95-2.27-.25-.6-.5-.5-.69-.51h-.59c-.2 0-.52.08-.8.37-.28.3-1.05 1.03-1.05 2.5s1.08 2.88 1.23 3.08c.15.2 2.12 3.25 5.14 4.56.72.31 1.29.5 1.72.64.72.23 1.38.2 1.9.12.58-.08 1.78-.73 2.03-1.44.25-.7.25-1.3.18-1.43-.08-.13-.28-.2-.58-.35z" />
+              </svg>
+            </a>
+            <button
+              className="p-2 rounded-md text-secondary-900 hover:bg-primary-50 hover:text-primary-700 transition-all duration-200"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                {isMobileMenuOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}

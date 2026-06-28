@@ -51,7 +51,7 @@ const Cybersecurity = () => {
         "24/7 SOC (Security Operations Center) services with real-time threat detection and incident response.",
       IconComponent: ClockIcon,
       image:
-        "https://images.unsplash.com/photo-1551808525-76a4f28b8f93?q=80&w=2070&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?q=80&w=2070&auto=format&fit=crop",
     },
     {
       title: "Compliance Management",

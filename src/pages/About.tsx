@@ -6,36 +6,6 @@ import ceoImage from "@/assets/image.png";
 const About = () => {
   return (
     <div>
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        {/* Background Image - Dubai Marina */}
-        <div className="absolute inset-0 z-0">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=2070&auto=format&fit=crop')",
-            }}
-          ></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-600/95 to-primary-700/95"></div>
-        </div>
-        <div className="container-custom relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto text-center"
-          >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white tracking-tight">
-              About NSLogix IT Solutions
-            </h1>
-            <p className="text-xl text-gray-200 leading-relaxed">
-              Your Trusted IT Partner for Digital Transformation
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Company Overview */}
       <Section className="bg-white">
         <div className="container-custom">
@@ -48,17 +18,23 @@ const About = () => {
             >
               <h2 className="section-title">Who We Are</h2>
               <p className="text-lg text-secondary-600 mb-6 leading-relaxed">
-                NSLogix IT Solutions is an industry leader in Managed IT
-                services and system integration. With over a decade of
-                experience, we've been helping businesses in Dubai and across
-                the UAE achieve their digital transformation goals.
+                NSLogix IT Solutions is a trusted Managed IT and system
+                integration partner with over a decade of experience. We help
+                organizations in Dubai, across the UAE, and globally modernize
+                operations through practical, future-ready technology.
               </p>
               <p className="text-lg text-secondary-600 mb-6 leading-relaxed">
-                Our team of certified professionals brings expertise in cloud
-                computing, cybersecurity, infrastructure management, and
-                business technology consulting. We pride ourselves on delivering
-                innovative solutions that drive business growth and operational
-                efficiency.
+                Our certified team delivers end-to-end expertise in cloud
+                services, cybersecurity, infrastructure, and IT consulting. We
+                design and implement solutions that improve performance,
+                strengthen resilience, and support long-term business growth.
+              </p>
+              <p className="text-lg text-secondary-600 mb-6 leading-relaxed">
+                Under the leadership of CEO Abdul Raheem, we build lasting
+                client partnerships through accountability, transparent
+                communication, and consistent delivery. Client satisfaction is
+                central to our approach, and we bring the same high standards
+                and commitment to excellence to every engagement.
               </p>
               <Button to="/contact" variant="primary">
                 Get In Touch
@@ -75,13 +51,13 @@ const About = () => {
               <div className="max-w-md ml-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-secondary-100">
                 <div className="bg-secondary-50 p-3 border-b border-secondary-100">
                   <p className="text-sm font-semibold text-secondary-700 text-center">
-                    CEO of NSLogix IT Solution
+                    Abdul Raheem, CEO of NSLogix IT Solutions
                   </p>
                 </div>
                 <div className="p-4">
                   <img
                     src={ceoImage}
-                    alt="CEO of NSLogix IT Solution"
+                    alt="Abdul Raheem, CEO of NSLogix IT Solutions"
                     className="w-full h-[420px] object-cover object-top rounded-xl"
                     loading="lazy"
                   />
@@ -181,11 +157,19 @@ const About = () => {
           >
             <h2 className="section-title">Our Core Values</h2>
             <p className="section-subtitle max-w-2xl mx-auto">
-              The principles that guide everything we do
+              The principles that guide every project, partnership, and decision
+              we make
+            </p>
+            <p className="text-lg text-secondary-600 max-w-4xl mx-auto mt-6 leading-relaxed">
+              Our values are not just words on a page. They define how we plan,
+              communicate, deliver, and improve every day. By staying true to
+              these values, we maintain high standards, take pride in our work,
+              and consistently provide the best possible outcomes for our
+              clients.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 title: "Excellence",
@@ -264,6 +248,46 @@ const About = () => {
                   </svg>
                 ),
                 description: "Your success is our success",
+              },
+              {
+                title: "Customer First",
+                icon: (
+                  <svg
+                    className="w-12 h-12 text-primary-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-4l-3 3-3-3z"
+                    />
+                  </svg>
+                ),
+                description:
+                  "Listening first and tailoring solutions around each client's goals",
+              },
+              {
+                title: "Accountability",
+                icon: (
+                  <svg
+                    className="w-12 h-12 text-primary-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                ),
+                description:
+                  "Owning outcomes with timely delivery, transparency, and follow-through",
               },
             ].map((value, index) => (
               <motion.div
