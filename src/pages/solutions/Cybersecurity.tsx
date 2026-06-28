@@ -98,7 +98,7 @@ const Cybersecurity = () => {
                 "url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop')",
             }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/95 to-primary-700/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-600/92 to-primary-500/88"></div>
         </div>
         <div className="container-custom relative z-10">
           <motion.div
@@ -199,14 +199,14 @@ const Cybersecurity = () => {
       </Section>
 
       {/* Statistics Section */}
-      <Section className="bg-gradient-to-br from-primary-900 to-primary-700 text-white">
+      <Section className="bg-white">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { number: "200+", label: "Clients Protected" },
               { number: "99.9%", label: "Threat Prevention Rate" },
               { number: "24/7", label: "Security Monitoring" },
-              { number: "15+", label: "Years Experience" },
+              { number: "5+", label: "Years Experience" },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -216,7 +216,7 @@ const Cybersecurity = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-5xl font-bold mb-2 text-primary-200">
+                <div className="text-5xl font-bold mb-2 text-secondary-600">
                   {stat.number}
                 </div>
                 <div className="text-primary-100">{stat.label}</div>

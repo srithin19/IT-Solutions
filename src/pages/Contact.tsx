@@ -1,4 +1,4 @@
-import { useState, type ChangeEvent, type FormEvent } from "react";
+import { useState, type ChangeEvent } from "react";
 import { motion } from "framer-motion";
 import Section from "@/components/ui/Section";
 import { contactInfo } from "@/data/constants";
@@ -19,10 +19,46 @@ const Contact = () => {
     message: string;
   }>({ type: null, message: "" });
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phoneRegex = /^\d{7,15}$/;
+
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus({ type: null, message: "" });
+
+    if (
+      !formData.name.trim() ||
+      !formData.email.trim() ||
+      !formData.phone.trim() ||
+      !formData.message.trim()
+    ) {
+      setSubmitStatus({
+        type: "error",
+        message:
+          "Please fill all required fields: Name, Email, Phone Number, and Message.",
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
+    if (!emailRegex.test(formData.email.trim())) {
+      setSubmitStatus({
+        type: "error",
+        message: "Please enter a valid email address.",
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
+    if (!phoneRegex.test(formData.phone.trim())) {
+      setSubmitStatus({
+        type: "error",
+        message: "Please enter a valid phone number using digits only.",
+      });
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
       // Web3Forms configuration
@@ -93,9 +129,12 @@ const Contact = () => {
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
+    const { name, value } = e.target;
+    const sanitizedValue = name === "phone" ? value.replace(/\D/g, "") : value;
+
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [name]: sanitizedValue,
     });
   };
 
@@ -112,7 +151,7 @@ const Contact = () => {
                 "url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2070&auto=format&fit=crop')",
             }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-600/95 to-primary-700/95"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-500/90 to-primary-600/86"></div>
         </div>
         <div className="container-custom relative z-10">
           <motion.div
@@ -205,16 +244,21 @@ const Contact = () => {
                     htmlFor="phone"
                     className="block text-sm font-medium text-secondary-700 mb-2"
                   >
-                    Phone Number
+                    Phone Number *
                   </label>
                   <input
                     type="tel"
                     id="phone"
                     name="phone"
+                    required
                     value={formData.phone}
                     onChange={handleChange}
+                    inputMode="numeric"
+                    pattern="[0-9]{7,15}"
+                    title="Please enter digits only (7 to 15 numbers)."
+                    maxLength={15}
                     className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
-                    placeholder="+971 XX XXX XXXX"
+                    placeholder="971507364139"
                   />
                 </div>
 
@@ -241,13 +285,12 @@ const Contact = () => {
                     htmlFor="subject"
                     className="block text-sm font-medium text-secondary-700 mb-2"
                   >
-                    Subject *
+                    Subject
                   </label>
                   <input
                     type="text"
                     id="subject"
                     name="subject"
-                    required
                     value={formData.subject}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"

@@ -23,7 +23,7 @@ const ServiceDetail = ({
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-primary-600 to-primary-700 text-white">
+      <section className="relative py-20 bg-gradient-to-br from-primary-500 to-primary-600 text-white">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -147,7 +147,7 @@ const ServiceDetail = ({
       </Section>
 
       {/* CTA Section */}
-      <Section className="bg-gradient-to-br from-primary-600 to-primary-700 text-white">
+      <Section className="bg-gradient-to-br from-primary-500 to-primary-600 text-white">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

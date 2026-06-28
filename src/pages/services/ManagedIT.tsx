@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import Section from "@/components/ui/Section";
-import Button from "@/components/ui/Button";
 import {
   ShieldCheckIcon,
   CloudIcon,
@@ -141,7 +140,7 @@ const ManagedIT = () => {
                 "url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop')",
             }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/95 to-primary-700/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-600/92 to-primary-500/88"></div>
         </div>
         <div className="container-custom relative z-10">
           <motion.div
@@ -158,14 +157,6 @@ const ManagedIT = () => {
               you can focus on your business. Get enterprise-level IT without
               the enterprise costs.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button to="/contact" variant="primary">
-                Get Started Today
-              </Button>
-              <Button to="/services" variant="outline">
-                View All Services
-              </Button>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -347,7 +338,7 @@ const ManagedIT = () => {
       </Section>
 
       {/* Statistics */}
-      <Section className="bg-gradient-to-br from-primary-900 to-primary-700 text-white">
+      <Section className="bg-gradient-to-br from-primary-600 to-primary-500 text-white">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[

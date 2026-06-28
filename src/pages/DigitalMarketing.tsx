@@ -52,7 +52,7 @@ const DigitalMarketing = () => {
                 "url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop')",
             }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-600/95 to-primary-700/95"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-500/90 to-primary-600/86"></div>
         </div>
         <div className="container-custom relative z-10">
           <motion.div
@@ -184,7 +184,7 @@ const DigitalMarketing = () => {
       </Section>
 
       {/* CTA Section */}
-      <Section className="bg-gradient-to-br from-primary-600 to-primary-700 text-white">
+      <Section className="bg-gradient-to-br from-primary-500 to-primary-600 text-white">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

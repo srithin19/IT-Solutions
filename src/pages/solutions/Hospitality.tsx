@@ -87,7 +87,7 @@ const Hospitality = () => {
                 "url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2070&auto=format&fit=crop')",
             }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/95 to-primary-800/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-600/92 to-primary-500/88"></div>
         </div>
         <div className="container-custom relative z-10">
           <motion.div
@@ -185,7 +185,7 @@ const Hospitality = () => {
       </Section>
 
       {/* Why Choose Us */}
-      <Section className="bg-gradient-to-br from-primary-900 to-primary-800 text-white">
+      <Section className="bg-white">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -200,15 +200,15 @@ const Hospitality = () => {
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">150+</div>
-                <p className="text-primary-200">Hotels & Resorts</p>
+                <p className="text-secondary-600">Hotels & Resorts</p>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">250+</div>
-                <p className="text-primary-200">Restaurants Served</p>
+                <p className="text-secondary-600">Restaurants Served</p>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">99%</div>
-                <p className="text-primary-200">Client Satisfaction</p>
+                <p className="text-secondary-600">Client Satisfaction</p>
               </div>
             </div>
           </motion.div>

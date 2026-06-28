@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import About from "@/pages/About";
 
@@ -24,14 +24,13 @@ describe("About Page", () => {
     expect(sections.length).toBeGreaterThan(0);
   });
 
-  it("has main heading", () => {
-    const { container } = render(
+  it("has section heading", () => {
+    render(
       <BrowserRouter>
         <About />
       </BrowserRouter>,
     );
 
-    const heading = container.querySelector("h1");
-    expect(heading).toBeInTheDocument();
+    expect(screen.getByText("Who We Are")).toBeInTheDocument();
   });
 });

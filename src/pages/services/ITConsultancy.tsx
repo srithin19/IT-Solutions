@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import Section from "@/components/ui/Section";
-import Button from "@/components/ui/Button";
 import {
   ChartBarIcon,
   LightBulbIcon,
@@ -125,7 +124,7 @@ const ITConsultancy = () => {
                 "url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2070&auto=format&fit=crop')",
             }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/95 to-primary-700/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-600/92 to-primary-500/88"></div>
         </div>
         <div className="container-custom relative z-10">
           <motion.div
@@ -142,14 +141,6 @@ const ITConsultancy = () => {
               the right technology strategies. Transform your IT infrastructure
               into a competitive advantage.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button to="/contact" variant="primary">
-                Schedule Consultation
-              </Button>
-              <Button to="/services" variant="outline">
-                View All Services
-              </Button>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -275,7 +266,7 @@ const ITConsultancy = () => {
       </Section>
 
       {/* Statistics */}
-      <Section className="bg-gradient-to-br from-primary-900 to-primary-700 text-white">
+      <Section className="bg-gradient-to-br from-primary-600 to-primary-500 text-white">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[

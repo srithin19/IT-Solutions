@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import Section from "@/components/ui/Section";
-import Button from "@/components/ui/Button";
 import {
   ShieldCheckIcon,
   ServerIcon,
@@ -137,7 +136,7 @@ const ITAudit = () => {
                 "url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2034&auto=format&fit=crop')",
             }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/95 to-primary-700/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-600/92 to-primary-500/88"></div>
         </div>
         <div className="container-custom relative z-10">
           <motion.div
@@ -154,14 +153,6 @@ const ITAudit = () => {
               vulnerabilities, optimize performance, and ensure compliance. Get
               a complete picture of your IT health.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button to="/contact" variant="primary">
-                Request IT Audit
-              </Button>
-              <Button to="/services" variant="outline">
-                View All Services
-              </Button>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -337,7 +328,7 @@ const ITAudit = () => {
       </Section>
 
       {/* Statistics */}
-      <Section className="bg-gradient-to-br from-primary-900 to-primary-700 text-white">
+      <Section className="bg-gradient-to-br from-primary-600 to-primary-500 text-white">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[

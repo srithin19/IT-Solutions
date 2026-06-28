@@ -46,7 +46,7 @@ describe("Contact Page", () => {
     expect(inputs.length).toBeGreaterThan(0);
   });
 
-  it("includes required subject field", () => {
+  it("includes optional subject field", () => {
     const { container } = render(
       <BrowserRouter>
         <Contact />
@@ -55,5 +55,6 @@ describe("Contact Page", () => {
 
     const subjectInput = container.querySelector('input[name="subject"]');
     expect(subjectInput).toBeInTheDocument();
+    expect(subjectInput).not.toHaveAttribute("required");
   });
 });

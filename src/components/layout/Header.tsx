@@ -32,13 +32,13 @@ const Header = () => {
   }, [location]);
 
   return (
-    <header className="fixed w-full top-0 z-50 h-20 bg-white shadow-lg">
+    <header className="fixed w-full top-0 z-50 h-20 bg-primary-50/95 border-b border-primary-100 shadow-md backdrop-blur-sm">
       <div className="container-custom">
         <div className="h-20 flex items-center justify-between">
           {/* Logo */}
           <Link
             to="/"
-            className="group flex items-center gap-3 rounded-xl px-2 py-1 transition-all duration-200 hover:bg-white/70"
+            className="group flex items-center gap-3 rounded-xl px-2 py-1 transition-all duration-200 hover:bg-white/85"
           >
             <div className="h-12 w-12 rounded-xl bg-white p-1.5 shadow-md ring-2 ring-primary-100 transition-all duration-200 group-hover:ring-primary-300">
               <img
@@ -49,7 +49,7 @@ const Header = () => {
               />
             </div>
             <div className="leading-tight">
-              <p className="text-lg md:text-xl font-bold text-gradient">
+              <p className="text-lg md:text-xl font-bold text-primary-600">
                 NSLogix IT Solutions
               </p>
               <p className="hidden md:block text-xs font-medium text-secondary-600">

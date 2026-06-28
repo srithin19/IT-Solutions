@@ -39,7 +39,7 @@ describe("Header Component", () => {
     expect(screen.getByText("Services")).toBeInTheDocument();
     expect(screen.getByText("Solutions")).toBeInTheDocument();
     expect(screen.getByText("Digital Marketing")).toBeInTheDocument();
-    expect(screen.getByText("Get Started")).toBeInTheDocument();
+    expect(screen.getByText("Get Quotation")).toBeInTheDocument();
   });
 
   it("renders CTA button", () => {
@@ -49,7 +49,7 @@ describe("Header Component", () => {
       </BrowserRouter>,
     );
 
-    expect(screen.getAllByText("Get Started")[0]).toBeInTheDocument();
+    expect(screen.getByText("Get Quotation")).toBeInTheDocument();
   });
 
   it("has proper structure and classes", () => {

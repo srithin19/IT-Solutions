@@ -90,7 +90,7 @@ const Automation = () => {
                 "url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2070&auto=format&fit=crop')",
             }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/95 to-blue-900/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-600/92 to-blue-700/86"></div>
         </div>
         <div className="container-custom relative z-10">
           <motion.div
@@ -188,7 +188,7 @@ const Automation = () => {
       </Section>
 
       {/* Why Choose Us */}
-      <Section className="bg-gradient-to-br from-primary-900 to-blue-900 text-white">
+      <Section className="bg-white">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -203,15 +203,15 @@ const Automation = () => {
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">400+</div>
-                <p className="text-primary-200">Processes Automated</p>
+                <p className="text-secondary-600">Processes Automated</p>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">50M+</div>
-                <p className="text-primary-200">Hours Saved Annually</p>
+                <p className="text-secondary-600">Hours Saved Annually</p>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">45%</div>
-                <p className="text-primary-200">Average Cost Reduction</p>
+                <p className="text-secondary-600">Average Cost Reduction</p>
               </div>
             </div>
             <div className="mt-12">

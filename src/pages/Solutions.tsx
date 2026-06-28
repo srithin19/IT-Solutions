@@ -43,7 +43,7 @@ const Solutions = () => {
   };
 
   const trustIndicators = [
-    { IconComponent: TrophyIcon, number: "15+", label: "Years of Excellence" },
+    { IconComponent: TrophyIcon, number: "5+", label: "Years of Excellence" },
     { IconComponent: UserGroupIcon, number: "200+", label: "Happy Clients" },
     {
       IconComponent: CheckCircleIcon,
@@ -66,7 +66,7 @@ const Solutions = () => {
                 "url('https://images.unsplash.com/photo-1546412414-e1885259563a?q=80&w=2070&auto=format&fit=crop')",
             }}
           ></div>
-          <div className="absolute inset-0 bg-white/85"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-500/90 to-primary-600/86"></div>
         </div>
         <div className="container-custom relative z-10">
           <motion.div
@@ -75,10 +75,10 @@ const Solutions = () => {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-secondary-900">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
               Comprehensive IT Solutions
             </h1>
-            <p className="text-xl text-secondary-700 leading-relaxed mb-8">
+            <p className="text-xl text-primary-100 leading-relaxed mb-8">
               Dubai's Most Trusted IT Solutions Provider - Delivering innovative
               technology solutions across all industries with unmatched
               expertise and support.
@@ -87,7 +87,7 @@ const Solutions = () => {
               <Button to="/contact" variant="primary">
                 Get Started Today
               </Button>
-              <Button to="/about" variant="outline-dark">
+              <Button to="/about" variant="outline">
                 Learn About Us
               </Button>
             </div>
@@ -211,7 +211,7 @@ const Solutions = () => {
                 IconComponent: CheckBadgeIcon,
                 title: "Proven Expertise",
                 description:
-                  "15+ years delivering world-class IT solutions across the UAE",
+                  "5+ years delivering world-class IT solutions across the UAE",
               },
               {
                 IconComponent: ShieldCheckIcon,

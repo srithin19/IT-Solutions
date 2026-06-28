@@ -8,13 +8,13 @@
   --color-primary-50: #f3f9ff;
   --color-primary-100: #e6f2ff;
   --color-primary-200: #cfe7ff;
-  --color-primary-300: #aad4ff;
-  --color-primary-400: #7bbcff;
-  --color-primary-500: #57a6ff;
-  --color-primary-600: #3d94f5;
-  --color-primary-700: #2f84e6;
-  --color-primary-800: #2673cf;
-  --color-primary-900: #1f62b5;
+  --color-primary-300: #b8dcff;
+  --color-primary-400: #96caff;
+  --color-primary-500: #75b7ff;
+  --color-primary-600: #5da7f5;
+  --color-primary-700: #4f98e6;
+  --color-primary-800: #3f87cf;
+  --color-primary-900: #3578b8;
   
   --color-secondary-50: #f8fafc;
   --color-secondary-100: #f1f5f9;
@@ -100,14 +100,14 @@ body {
   font-weight: 600;
   border-radius: 0.5rem;
   color: white;
-  background: linear-gradient(135deg, var(--color-primary-600), var(--color-primary-700));
+  background: linear-gradient(135deg, #3d94f5, #2f84e6);
   box-shadow: 0 4px 14px 0 rgba(61, 148, 245, 0.36);
   transition: all 0.3s ease;
   letter-spacing: 0.3px;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, var(--color-primary-700), var(--color-primary-800));
+  background: linear-gradient(135deg, #2f84e6, #2673cf);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(47, 132, 230, 0.45);
 }
@@ -135,7 +135,7 @@ body {
 
 .btn-secondary:hover {
   background-color: white;
-  color: var(--color-primary-600);
+  color: #3d94f5;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
 }
@@ -163,7 +163,7 @@ body {
 
 .btn-outline:hover {
   background-color: white;
-  color: var(--color-primary-600);
+  color: #3d94f5;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
 }
@@ -178,7 +178,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0.875rem 2rem;
-  border: 2px solid var(--color-primary-600);
+  border: 2px solid #3d94f5;
   font-size: 1rem;
   font-weight: 600;
   border-radius: 0.5rem;
@@ -189,7 +189,8 @@ body {
 }
 
 .btn-outline-dark:hover {
-  background-color: var(--color-primary-600);
+  background-color: #3d94f5;
+  border-color: #3d94f5;
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(61, 148, 245, 0.3);

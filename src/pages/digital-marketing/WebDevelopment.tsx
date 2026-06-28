@@ -119,7 +119,7 @@ const WebDevelopment = () => {
                 "url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop')",
             }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-600/95 to-primary-700/95"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-500/90 to-primary-600/86"></div>
         </div>
         <div className="container-custom relative z-10">
           <motion.div
@@ -261,7 +261,7 @@ const WebDevelopment = () => {
       </Section>
 
       {/* Statistics */}
-      <Section className="bg-gradient-to-br from-primary-600 to-primary-700 text-white">
+      <Section className="bg-gradient-to-br from-primary-500 to-primary-600 text-white">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <motion.div

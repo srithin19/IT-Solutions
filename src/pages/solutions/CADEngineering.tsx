@@ -76,7 +76,7 @@ const CADEngineering = () => {
                 "url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2031&auto=format&fit=crop')",
             }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/95 to-primary-800/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-600/92 to-primary-500/88"></div>
         </div>
         <div className="container-custom relative z-10">
           <motion.div
@@ -186,7 +186,7 @@ const CADEngineering = () => {
       </Section>
 
       {/* Why Choose Us */}
-      <Section className="bg-gradient-to-br from-primary-900 to-primary-800 text-white">
+      <Section className="bg-white">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -201,15 +201,15 @@ const CADEngineering = () => {
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">200+</div>
-                <p className="text-primary-200">Design Firms Served</p>
+                <p className="text-secondary-600">Design Firms Served</p>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">1000+</div>
-                <p className="text-primary-200">Users Trained</p>
+                <p className="text-secondary-600">Users Trained</p>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">5+</div>
-                <p className="text-primary-200">Years of Expertise</p>
+                <p className="text-secondary-600">Years of Expertise</p>
               </div>
             </div>
           </motion.div>

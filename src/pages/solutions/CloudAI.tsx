@@ -131,7 +131,7 @@ const CloudAI = () => {
                 "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')",
             }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/95 to-blue-900/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-600/92 to-blue-700/86"></div>
         </div>
         <div className="container-custom relative z-10">
           <motion.div
@@ -271,7 +271,7 @@ const CloudAI = () => {
       </Section>
 
       {/* Why Choose Us */}
-      <Section className="bg-gradient-to-br from-primary-900 to-blue-900 text-white">
+      <Section className="bg-white">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -286,15 +286,15 @@ const CloudAI = () => {
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">300+</div>
-                <p className="text-primary-200">Cloud Migrations Completed</p>
+                <p className="text-secondary-600">Cloud Migrations Completed</p>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">50+</div>
-                <p className="text-primary-200">AI Solutions Deployed</p>
+                <p className="text-secondary-600">AI Solutions Deployed</p>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">100%</div>
-                <p className="text-primary-200">Cloud Uptime SLA</p>
+                <p className="text-secondary-600">Cloud Uptime SLA</p>
               </div>
             </div>
           </motion.div>

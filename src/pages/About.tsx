@@ -19,7 +19,7 @@ const About = () => {
               <h2 className="section-title">Who We Are</h2>
               <p className="text-lg text-secondary-600 mb-6 leading-relaxed">
                 NSLogix IT Solutions is a trusted Managed IT and system
-                integration partner with over a decade of experience. We help
+                integration partner with over 5+ years of experience. We help
                 organizations in Dubai, across the UAE, and globally modernize
                 operations through practical, future-ready technology.
               </p>
@@ -30,11 +30,10 @@ const About = () => {
                 strengthen resilience, and support long-term business growth.
               </p>
               <p className="text-lg text-secondary-600 mb-6 leading-relaxed">
-                Under the leadership of CEO Abdul Raheem, we build lasting
-                client partnerships through accountability, transparent
-                communication, and consistent delivery. Client satisfaction is
-                central to our approach, and we bring the same high standards
-                and commitment to excellence to every engagement.
+                We build lasting client partnerships through accountability,
+                transparent communication, and consistent delivery. Client
+                satisfaction is central to our approach, and we bring the same
+                high standards and commitment to excellence to every engagement.
               </p>
               <Button to="/contact" variant="primary">
                 Get In Touch

@@ -101,7 +101,7 @@ const Infrastructure = () => {
                 "url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2070&auto=format&fit=crop')",
             }}
           ></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/95 to-primary-700/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-600/92 to-primary-500/88"></div>
         </div>
         <div className="container-custom relative z-10">
           <motion.div
@@ -202,7 +202,7 @@ const Infrastructure = () => {
       </Section>
 
       {/* Why Choose Us */}
-      <Section className="bg-gradient-to-br from-primary-900 to-primary-700 text-white">
+      <Section className="bg-white">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -217,15 +217,15 @@ const Infrastructure = () => {
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">250+</div>
-                <p className="text-primary-200">Successful Projects</p>
+                <p className="text-secondary-600">Successful Projects</p>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">5+</div>
-                <p className="text-primary-200">Years of Experience</p>
+                <p className="text-secondary-600">Years of Experience</p>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold mb-2">98%</div>
-                <p className="text-primary-200">Client Satisfaction Rate</p>
+                <p className="text-secondary-600">Client Satisfaction Rate</p>
               </div>
             </div>
           </motion.div>
