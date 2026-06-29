@@ -32,13 +32,13 @@ const Header = () => {
   }, [location]);
 
   return (
-    <header className="fixed w-full top-0 z-50 h-20 bg-primary-50/95 border-b border-primary-100 shadow-md backdrop-blur-sm">
+    <header className="fixed w-full top-0 z-50 h-20 bg-white shadow-lg">
       <div className="container-custom">
         <div className="h-20 flex items-center justify-between">
           {/* Logo */}
           <Link
             to="/"
-            className="group flex items-center gap-3 rounded-xl px-2 py-1 transition-all duration-200 hover:bg-white/85"
+            className="group flex items-center gap-3 rounded-xl px-2 py-1 transition-all duration-200 hover:bg-white/70"
           >
             <div className="h-12 w-12 rounded-xl bg-white p-1.5 shadow-md ring-2 ring-primary-100 transition-all duration-200 group-hover:ring-primary-300">
               <img
@@ -204,7 +204,7 @@ const Header = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden absolute top-20 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-secondary-200 shadow-xl"
+              className="lg:hidden absolute top-20 left-0 right-0 bg-white border-t border-secondary-200 shadow-xl"
             >
               <nav className="max-h-[calc(100vh-5rem)] overflow-y-auto overscroll-contain px-4 py-4 space-y-2">
                 {navigationItems.map((item) => (
